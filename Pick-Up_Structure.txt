@@ -1,0 +1,10 @@
+Stucture of Pick-Up, Power-Up and Weapons
+
+
+Pick-Up
+-Require collider and meshRenderer from object
+-float cooldownTime
+-Start()
+-Update()
+-BeTaken()
+-Respawn()

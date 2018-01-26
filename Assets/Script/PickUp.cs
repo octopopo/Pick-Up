@@ -54,6 +54,7 @@ public class PickUp : MonoBehaviour {
             if (other.CompareTag("Player")) 
             {
                 BeTaken();
+                //other.GetComponent<PlayerSatus>().updatePlayer()
             }
         }
     }
@@ -69,5 +70,7 @@ public class PickUp : MonoBehaviour {
         m_MRenderer.enabled = false;
         isCooldown = true;
         cooldownCounter = cooldownTime;
+        //PlayerUpdate(int power, string type,)
+        //
     }
 }
