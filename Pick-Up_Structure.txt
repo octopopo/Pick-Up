@@ -8,3 +8,9 @@ Pick-Up
 -Update()
 -BeTaken()
 -Respawn()
+
+
+
+For weapon
+I'll create a weapon for player to pick up on the ground
+and another weapon for player to hold it
