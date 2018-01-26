@@ -9,13 +9,13 @@ using UnityEngine;
 public class PickUp : MonoBehaviour {
 
     //[SerializeField] private float respawnTime;
-    [SerializeField] private float cooldownTime = 5.0f;
-    private Collider m_Collider;
-    private MeshRenderer m_MRenderer;
-    private bool isCooldown;
-    private float cooldownCounter;
+    [SerializeField] public float cooldownTime = 5.0f;
+    public Collider m_Collider;
+    public MeshRenderer m_MRenderer;
+    public bool isCooldown;
+    public float cooldownCounter;
 
-    enum pickUpType
+    public enum pickUpType
     {
         weapon = 0,
         powerUp = 1
@@ -31,6 +31,7 @@ public class PickUp : MonoBehaviour {
         m_MRenderer.enabled = true;
         //Remember to set all object to the state you want in the beginning
         isCooldown = false;
+        gameObject.tag = "PickUp";
 	}
 	
 	// Update is called once per frame
