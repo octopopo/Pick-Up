@@ -1,0 +1,8 @@
+Work Records
+1/26/2018 2:55pm
+Finish making three kinds of object: Pick-Up, Power-Up, Weapon
+Decide to make two versions of object for each weapons, one is one the ground for player to pick, another is for player to use (haven't made yet)
+
+1/26/2018 2:59
+Add an empty object under the player as player's hand
+Since there will be two versions of weapons, the pickup versions wouldn't have to carry to much information except for the type of weapon(to-do)
