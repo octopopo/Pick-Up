@@ -37,14 +37,14 @@ public class PickUp : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //if it is cooldonwing, reduce the cooldown time
-        if (isCooldown)
+        /*if (isCooldown)
         {
             cooldownCounter -= Time.deltaTime;
             if(cooldownCounter <= 0)
             {
                 Respawn();
             }
-        }
+        }*/
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -70,8 +70,16 @@ public class PickUp : MonoBehaviour {
     {
         m_MRenderer.enabled = false;
         isCooldown = true;
-        cooldownCounter = cooldownTime;
+        StartCoroutine(waitRespawn(cooldownTime));
+        //cooldownCounter = cooldownTime;
         //PlayerUpdate(int power, string type,)
         //
+    }
+
+    //It seems like working
+    private IEnumerator waitRespawn(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Respawn();
     }
 }
