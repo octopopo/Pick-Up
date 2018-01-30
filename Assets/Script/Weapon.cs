@@ -8,18 +8,17 @@ using UnityEngine;
 public class Weapon : PickUp
 {
 
-    enum weaponType
+    /*enum weaponType
     {
         Stone = 1,
         Grenade = 2,
         Boomerang = 3
-    }
-
-    pickUpType m_PUType = pickUpType.powerUp;
+    }*/
 
     [SerializeField] private float weaponCDTime = 8.0f;
-    [SerializeField] private weaponType m_weaponType = weaponType.Stone;
+    //[SerializeField] private weaponType m_weaponType = weaponType.Stone;
     //[SerializeField] private float powerAmount = 1;
+    public int weaponTypeNum = 0;
 
     // Use this for initialization
     void Start()
@@ -32,7 +31,8 @@ public class Weapon : PickUp
         m_MRenderer.enabled = true;
         //Remember to set all object to the state you want in the beginning
         isCooldown = false;
-        gameObject.tag = "Weapon";
+        gameObject.tag = "WeaponPick";
+        m_PUType = pickUpType.powerUp;
     }
 
 

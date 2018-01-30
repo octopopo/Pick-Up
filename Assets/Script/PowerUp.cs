@@ -15,8 +15,6 @@ public class PowerUp : PickUp {
         Jump = 3
     }
 
-    pickUpType m_PUType = pickUpType.powerUp;
-
     [SerializeField] private float powerUpCDTime = 10.0f;
     [SerializeField] private powerType m_powerType = powerType.Damage;
     [SerializeField] private float powerAmount = 1;
@@ -32,6 +30,7 @@ public class PowerUp : PickUp {
         //Remember to set all object to the state you want in the beginning
         isCooldown = false;
         gameObject.tag = "Power-Up";
+        m_PUType = pickUpType.powerUp;
     }
 	
 

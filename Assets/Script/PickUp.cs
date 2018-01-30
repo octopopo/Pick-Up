@@ -21,9 +21,10 @@ public class PickUp : MonoBehaviour {
         powerUp = 1
     }
 
+    public pickUpType m_PUType;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         //set all the pickup to be a trigger
         m_Collider = GetComponent<Collider>();
         m_Collider.isTrigger = true;

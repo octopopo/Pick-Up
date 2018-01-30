@@ -7,6 +7,9 @@ TagManager:
   - Power-Up
   - Weapon
   - PickUp
+  - Hand
+  - WeaponPick
+  - WeaponKeeper
   layers:
   - Default
   - TransparentFX
